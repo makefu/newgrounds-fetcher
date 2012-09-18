@@ -1,6 +1,14 @@
-This script may fetch a random music file from the newgrounds audio portal.
-There are different parameters to tune ( e.g. minimum rating and style )
+The newgrounds-fetcher downloads and plays random music file from the newgrounds audio portal.
+There are different parameters to tune ( e.g. minimum rating and style ).
+
 
 See the source code for documentation.
 
-This is actually one of my favorite scripts, enjoy
+# mpdPlaylist
+mpdPlaylist is an implementation which does not download the music but just adds the music to the local mpd.
+With an icecast daemon attached you can listen to some sweet tunes while the server does all the hard work
+
+# randPlaylist.sh 
+randPlaylist is the implementation which downloads newgrounds music,saves it to a temporary directory and plays the music with mplayer.
+The implementation does not support concurrency of downloading and playing music, the queue length is 1.
+This implementation is currently unmaintained, please see mpdPlaylist for a working example.
